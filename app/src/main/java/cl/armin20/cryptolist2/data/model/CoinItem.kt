@@ -12,4 +12,5 @@ val name: String,
 val priceUsd: Float,
 val supply:Float,
 val marketCapUsd:Float,
+val changePercent24Hr:String
 )

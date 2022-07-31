@@ -1,22 +1,28 @@
 package cl.armin20.cryptolist2.ui
 
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import cl.armin20.cryptolist2.R
 import cl.armin20.cryptolist2.data.model.Data
+import cl.armin20.cryptolist2.ui.theme.PurpleSoft
+import cl.armin20.cryptolist2.ui.theme.SilverSoft
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 
@@ -33,6 +39,7 @@ fun CryptoScreen(onItemClick: (id: String) -> Unit){
         ),
         modifier = Modifier
             .fillMaxSize()
+            .background(PurpleSoft)
     ){
         items(cryptoViewModel.cryptoList.value.data){
             CryptoListItem(
@@ -48,15 +55,15 @@ fun CryptoListItem(item: Data, onItemClick: (id: String) -> Unit){
     Card(
         elevation = 4.dp,
         modifier = Modifier
-            .padding(8.dp)
+            .padding(6.dp)
             .fillMaxWidth()
-            .size(70.dp)
+            .size(height = 90.dp, width = 0.dp)
             .clickable { onItemClick(item.id) }
     ) {
         Row(
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
-//            modifier = Modifier.padding(8.dp)
+            modifier = Modifier.background(SilverSoft)
         ) {
 //            CryptoIcon(Icons.Filled.Place, Modifier.weight(0.15f))
             AsyncImage(
@@ -75,12 +82,18 @@ fun CryptoListItem(item: Data, onItemClick: (id: String) -> Unit){
                 contentScale = ContentScale.Fit
             )
             Text(
-                text = item.symbol,
+                text = item.symbol.lowercase(),
+                style = MaterialTheme.typography.h4.copy(color = Color.White),
                 modifier = Modifier.weight(0.3f)
             )
             Text(
-                text = "USD$ ${item.priceUsd}",
-                modifier = Modifier.weight(0.4f)
+                text = item.priceUsd.toString(),
+                style = MaterialTheme.typography.h6.copy(color = Color.White),
+                modifier = Modifier
+                    .weight(0.4f)
+                    .padding(end = 25.dp),
+                overflow = TextOverflow.Ellipsis,
+                maxLines = 1
             )
         }
     }

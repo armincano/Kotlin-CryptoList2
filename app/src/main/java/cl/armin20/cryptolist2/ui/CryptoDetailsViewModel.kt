@@ -18,7 +18,7 @@ class CryptoDetailsViewModel(stateHandle: SavedStateHandle) : ViewModel() {
     private val service = CoincapRetrofitClient.retrofitInstance()
     //    var ejemplo:CoinItem? = null
     //value holder whose reads and writes are observed by Compose
-    val cryptoDetail = mutableStateOf(CoinDetailItem(Data("","","",1f,1f,1f),1))
+    val cryptoDetail = mutableStateOf(CoinDetailItem(Data("","","",1f,1f,1f,""),1))
 
     fun getDateTime(s: Long): String {
         return try {
