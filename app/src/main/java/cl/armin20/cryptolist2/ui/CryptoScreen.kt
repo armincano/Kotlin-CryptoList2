@@ -78,7 +78,7 @@ fun CryptoListItem(item: Data, onItemClick: (id: String) -> Unit){
 //                    .clip(RoundedCornerShape(10.dp)),
 //                    .background(Color.White),
 //                    .clip(CircleCropTransformation())
-                placeholder = painterResource(R.drawable.ic_baseline_sushi_24),
+//                placeholder = painterResource(R.drawable.ic_baseline_face1),
                 contentScale = ContentScale.Fit
             )
             Text(

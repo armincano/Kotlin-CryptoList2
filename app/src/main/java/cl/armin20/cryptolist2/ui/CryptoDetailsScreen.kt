@@ -107,7 +107,7 @@ fun SymbolSection(){
 //                    .clip(RoundedCornerShape(10.dp)),
 //                    .background(Color.White),
 //                    .clip(CircleCropTransformation())
-            placeholder = painterResource(R.drawable.ic_baseline_sushi_24),
+//            error = painterResource(R.drawable.ic_baseline_broken_image),
             contentScale = ContentScale.Fit
         )
     }
