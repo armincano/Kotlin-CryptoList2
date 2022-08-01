@@ -8,7 +8,6 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import cl.armin20.cryptolist2.data.model.CoinDetailItem
 import cl.armin20.cryptolist2.data.model.Coins
-import cl.armin20.cryptolist2.data.model.Converters
 
 
 @Database(

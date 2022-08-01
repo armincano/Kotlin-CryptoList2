@@ -72,7 +72,7 @@ fun StickyHeader(cryptoViewModel:CryptoViewModel){
             modifier = Modifier.weight(0.7f)
         )
         Button(
-            onClick = { GlobalScope.launch(Dispatchers.IO) { cryptoViewModel.updateCoins() }},
+            onClick = { GlobalScope.launch(Dispatchers.IO) { cryptoViewModel.getCoins() }},
             modifier = Modifier
                 .size(width = 120.dp, height = 40.dp)
                 .weight(0.3f)

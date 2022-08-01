@@ -1,6 +1,7 @@
-package cl.armin20.cryptolist2.data.model
+package cl.armin20.cryptolist2.data.database
 
 import androidx.room.TypeConverter
+import cl.armin20.cryptolist2.data.model.Data
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
