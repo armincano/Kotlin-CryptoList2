@@ -4,8 +4,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -13,14 +11,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight.Companion.Bold
-import androidx.compose.ui.text.font.FontWeight.Companion.SemiBold
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
@@ -30,16 +24,14 @@ import cl.armin20.cryptolist2.R
 import cl.armin20.cryptolist2.ui.theme.DecreaseValue
 import cl.armin20.cryptolist2.ui.theme.IncreaseValue
 import cl.armin20.cryptolist2.ui.theme.PurpleSoft
-import cl.armin20.cryptolist2.ui.theme.SilverSoft
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 
 @Composable
 @Preview(showSystemUi = true, device = Devices.NEXUS_6)
 fun CryptoDetailsScreen() {
-    val cryptoDetailsViewModel:CryptoDetailsViewModel = viewModel()
-    val textex1 = "bitcoin"
-    val textex2 = 123.2021902
+//    val textex1 = "bitcoin"
+//    val textex2 = 123.2021902
     
     Box(modifier = Modifier
         .fillMaxSize()
@@ -116,8 +108,8 @@ fun SymbolSection(){
 @Composable
 fun CardSection(){
     val cryptoDetailsViewModel:CryptoDetailsViewModel = viewModel()
-    val textex1 = "bitcoin"
-    val textex2 = 123.20219
+//    val textex1 = "bitcoin"
+//    val textex2 = 123.20219
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -159,8 +151,8 @@ fun CardSection(){
 @Composable
 fun OthersValuesSection(){
     val cryptoDetailsViewModel:CryptoDetailsViewModel = viewModel()
-    val textex1 = "bitcoin"
-    val textex2 = 123.20219
+//    val textex1 = "bitcoin"
+//    val textex2 = 123.20219
 
     Row(
         horizontalArrangement = Arrangement.SpaceEvenly,

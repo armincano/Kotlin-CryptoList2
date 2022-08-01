@@ -39,11 +39,13 @@ class MainActivity : ComponentActivity() {
 private fun CryptoListApp() {
     val navController = rememberNavController()
     NavHost(navController, startDestination = "cryptocoins") {
+
         composable(route = "cryptocoins") {
             CryptoScreen { id ->
                 navController.navigate("cryptocoins/$id")
             }
         }
+
         composable(
             route = "cryptocoins/{id}",
             arguments = listOf(navArgument("id") {
