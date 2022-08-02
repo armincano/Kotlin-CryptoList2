@@ -1,7 +1,5 @@
 package cl.armin20.cryptolist2.data.repository
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import cl.armin20.cryptolist2.data.model.CoinDetailItem
 import cl.armin20.cryptolist2.data.model.Coins
 

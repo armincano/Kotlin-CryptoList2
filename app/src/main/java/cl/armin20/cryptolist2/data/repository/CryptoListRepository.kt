@@ -2,8 +2,6 @@ package cl.armin20.cryptolist2.data.repository
 
 import android.app.Application
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import cl.armin20.cryptolist2.CryptoList2Application
 import cl.armin20.cryptolist2.NetworkPing
 import cl.armin20.cryptolist2.data.database.CoinsDb

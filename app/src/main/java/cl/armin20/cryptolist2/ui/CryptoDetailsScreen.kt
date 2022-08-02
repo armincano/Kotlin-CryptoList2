@@ -46,7 +46,7 @@ fun CryptoDetailsScreen() {
             contentScale = ContentScale.FillWidth,
         )
 
-        Column() {
+        Column {
             SymbolSection()
             CardSection()
             Spacer(modifier = Modifier.height(46.dp))
@@ -134,11 +134,12 @@ fun CardSection(){
         )
         Column(
             verticalArrangement = Arrangement.Center,
-            modifier = Modifier.padding(start = 90.dp, top = 145.dp)
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.padding(top = 145.dp).fillMaxWidth()
         ) {
             Text(
                 text = "US Dollar",
-                style = MaterialTheme.typography.h6.copy(color = Color.White)
+                style = MaterialTheme.typography.h5.copy(color = Color.White)
             )
             Text(
             text =  "${cryptoDetailsViewModel.getDateTime(cryptoDetailsViewModel.cryptoDetail.value.timestamp)} hrs.",
