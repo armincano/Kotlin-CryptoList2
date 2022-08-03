@@ -1,7 +1,6 @@
 package cl.armin20.cryptolist2.ui.theme
 
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 
 val Purple200 = Color(0xFFBB86FC)
 val Purple500 = Color(0xFF6200EE)

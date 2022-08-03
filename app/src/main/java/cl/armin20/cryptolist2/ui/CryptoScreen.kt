@@ -9,9 +9,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Create
-import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -23,11 +21,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewModelScope
 import androidx.lifecycle.viewmodel.compose.viewModel
 import cl.armin20.cryptolist2.CryptoList2Application
 import cl.armin20.cryptolist2.data.datastore.WelcomeViewModel
-import cl.armin20.cryptolist2.data.datastore.writeUserName
 import cl.armin20.cryptolist2.data.model.Data
 import cl.armin20.cryptolist2.ui.theme.PurpleSoft
 import cl.armin20.cryptolist2.ui.theme.SilverSoft
