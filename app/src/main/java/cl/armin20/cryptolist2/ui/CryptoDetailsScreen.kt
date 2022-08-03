@@ -21,10 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import cl.armin20.cryptolist2.R
-import cl.armin20.cryptolist2.ui.theme.Blackest
-import cl.armin20.cryptolist2.ui.theme.DecreaseValue
-import cl.armin20.cryptolist2.ui.theme.IncreaseValue
-import cl.armin20.cryptolist2.ui.theme.PurpleSoft
+import cl.armin20.cryptolist2.ui.theme.*
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 
@@ -51,7 +48,7 @@ fun CryptoDetailsScreen() {
             SymbolSection()
             Spacer(modifier = Modifier.height(25.dp))
             CardSection()
-            Spacer(modifier = Modifier.height(30.dp))
+            Spacer(modifier = Modifier.height(35.dp))
             OthersValuesSection()
         }
 
@@ -127,7 +124,7 @@ fun CardSection(){
 //            text = textex2.toString(),
             style = MaterialTheme.typography.h3.copy(color = Color.White),
             modifier = Modifier
-                .padding(top = 25.dp, bottom = 8.dp, start = 75.dp, end = 90.dp)
+                .padding(top = 25.dp, bottom = 8.dp, start = 80.dp, end = 90.dp)
                 .align(Alignment.TopCenter),
             overflow = TextOverflow.Clip,
             maxLines = 1
@@ -165,7 +162,7 @@ fun OthersValuesSection(){
                 .padding(horizontal = 40.dp)
                 .clip(RoundedCornerShape(10.dp))
                 .fillMaxWidth()
-                .size(width = 155.dp, height = 95.dp)
+                .size(width = 155.dp, height = 85.dp)
                 .background(PurpleSoft)
         ) {
             Row(modifier = Modifier.padding(start = 25.dp)) {
@@ -176,7 +173,7 @@ fun OthersValuesSection(){
                     overflow = TextOverflow.Ellipsis,
                     maxLines = 1,
                     color = Color.Black,
-                    modifier = Modifier.padding(start = 12.dp, top = 8.dp)
+                    modifier = Modifier.padding(start = 12.dp, top = 6.dp)
                 )
             }
             Row(Modifier.padding(start = 25.dp)) {
@@ -214,7 +211,7 @@ fun OthersValuesSection(){
 //            text = textex2.toString(),
             style = MaterialTheme.typography.h4.copy(color = Blackest),
             modifier = Modifier
-                .padding(top = 10.dp, bottom = 8.dp, start = 50.dp, end = 50.dp)
+                .padding(top = 8.dp, bottom = 8.dp, start = 50.dp, end = 50.dp)
                 .align(Alignment.TopCenter),
             overflow = TextOverflow.Ellipsis,
             maxLines = 1

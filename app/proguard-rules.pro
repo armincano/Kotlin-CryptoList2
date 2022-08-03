@@ -21,4 +21,8 @@
 #-renamesourcefileattribute SourceFile
 
 # Disable Logging
--assumenosideeffects class android.util.Log {*;}
+-assumenosideeffects class android.util.Log {*; }
+
+-keep class cl.armin20.cryptolist2.data.model.CoinDetailItem {*; }
+-keep class cl.armin20.cryptolist2.data.model.Coins {*; }
+-keep class cl.armin20.cryptolist2.data.model.Data {*; }

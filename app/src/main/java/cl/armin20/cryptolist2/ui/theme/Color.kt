@@ -12,5 +12,5 @@ val PurpleSoft = Color(0xFF8172F9)
 val Blackest = Color(0xFF000001)
 
 
-val IncreaseValue = Color(0xFFE7FE55)
-val DecreaseValue = Color(0xFFFF6BA4)
+val IncreaseValue = Color(0xFF38C655)
+val DecreaseValue = Color(0xFFFF3EA4)

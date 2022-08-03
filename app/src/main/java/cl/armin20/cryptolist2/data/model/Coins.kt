@@ -1,9 +1,11 @@
 package cl.armin20.cryptolist2.data.model
 
+import androidx.annotation.Keep
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@Keep
 @Entity(tableName = "coins")
 data class Coins(
 
@@ -20,7 +22,7 @@ data class Coins(
    val timestamp: Long
 )
 
-
+@Keep
 data class Data(
 
    @ColumnInfo(name = "id")

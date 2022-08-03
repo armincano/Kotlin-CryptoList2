@@ -1,9 +1,11 @@
 package cl.armin20.cryptolist2.data.model
 
+import androidx.annotation.Keep
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@Keep
 @Entity(tableName = "coin_detail_item")
 data class CoinDetailItem(
 
