@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import cl.armin20.cryptolist2.R
+import cl.armin20.cryptolist2.ui.theme.Blackest
 import cl.armin20.cryptolist2.ui.theme.DecreaseValue
 import cl.armin20.cryptolist2.ui.theme.IncreaseValue
 import cl.armin20.cryptolist2.ui.theme.PurpleSoft
@@ -48,8 +49,9 @@ fun CryptoDetailsScreen() {
 
         Column {
             SymbolSection()
+            Spacer(modifier = Modifier.height(25.dp))
             CardSection()
-            Spacer(modifier = Modifier.height(46.dp))
+            Spacer(modifier = Modifier.height(30.dp))
             OthersValuesSection()
         }
 
@@ -66,7 +68,7 @@ fun SymbolSection(){
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(15.dp)
+            .padding(5.dp)
     ) {
         Column(
             verticalArrangement = Arrangement.Center,
@@ -119,15 +121,13 @@ fun CardSection(){
             contentDescription = null,
             modifier = Modifier
                 .align(Alignment.TopCenter)
-                .scale(1.5f)
-                .padding(top = 30.dp)
+                .scale(1.3f)
         )
-        Text(
-                        text = "${cryptoDetailsViewModel.cryptoDetail.value.data.priceUsd}",
+        Text(text = "${cryptoDetailsViewModel.cryptoDetail.value.data.priceUsd}",
 //            text = textex2.toString(),
             style = MaterialTheme.typography.h3.copy(color = Color.White),
             modifier = Modifier
-                .padding(top = 60.dp, bottom = 8.dp, start = 75.dp, end = 90.dp)
+                .padding(top = 25.dp, bottom = 8.dp, start = 75.dp, end = 90.dp)
                 .align(Alignment.TopCenter),
             overflow = TextOverflow.Clip,
             maxLines = 1
@@ -135,7 +135,9 @@ fun CardSection(){
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.padding(top = 145.dp).fillMaxWidth()
+            modifier = Modifier
+                .padding(top = 100.dp)
+                .fillMaxWidth()
         ) {
             Text(
                 text = "US Dollar",
@@ -155,65 +157,62 @@ fun OthersValuesSection(){
 //    val textex1 = "bitcoin"
 //    val textex2 = 123.20219
 
-    Row(
-        horizontalArrangement = Arrangement.SpaceEvenly,
-        verticalAlignment = Alignment.CenterVertically,
-        modifier = Modifier
-            .fillMaxWidth()
 
-    ) {
         Column(
+            verticalArrangement = Arrangement.SpaceEvenly,
+            horizontalAlignment = Alignment.Start,
             modifier = Modifier
+                .padding(horizontal = 40.dp)
                 .clip(RoundedCornerShape(10.dp))
-                .size(width = 155.dp, height = 90.dp)
+                .fillMaxWidth()
+                .size(width = 155.dp, height = 95.dp)
                 .background(PurpleSoft)
-                .padding(12.dp)
         ) {
-            Text(text = "Supply", style = MaterialTheme.typography.h5,modifier = Modifier.padding(start = 5.dp))
-            Text(
-            text = cryptoDetailsViewModel.cryptoDetail.value.data.supply.toString(),
+            Row(modifier = Modifier.padding(start = 25.dp)) {
+                Text(text = "Supply", style = MaterialTheme.typography.h5.copy(color = Color.Black))
+                Text(
+                    text = cryptoDetailsViewModel.cryptoDetail.value.data.supply.toString(),
 //                text = textex2.toString(),
-                modifier = Modifier.padding(top = 5.dp, start = 5.dp),
-                overflow = TextOverflow.Ellipsis,
-                maxLines = 2
-            )
-        }
-        Column(
-            modifier = Modifier
-                .clip(RoundedCornerShape(10.dp))
-                .size(width = 155.dp, height = 90.dp)
-                .background(PurpleSoft)
-                .padding(12.dp)
-        ) {
-            Text(text = "Market cap", style = MaterialTheme.typography.h5,modifier = Modifier.padding(start = 5.dp))
-            Text(
-            text = cryptoDetailsViewModel.cryptoDetail.value.data.marketCapUsd.toString(),
+                    overflow = TextOverflow.Ellipsis,
+                    maxLines = 1,
+                    color = Color.Black,
+                    modifier = Modifier.padding(start = 12.dp, top = 8.dp)
+                )
+            }
+            Row(Modifier.padding(start = 25.dp)) {
+                Text(text = "Market cap", style = MaterialTheme.typography.h5.copy(color = Color.Black))
+                Text(
+                    text = cryptoDetailsViewModel.cryptoDetail.value.data.marketCapUsd.toString(),
 //                text = textex2.toString(),
-                modifier = Modifier.padding(top = 5.dp, start = 5.dp),
-                overflow = TextOverflow.Ellipsis,
-                maxLines = 2
-            )
+                    overflow = TextOverflow.Ellipsis,
+                    maxLines = 1,
+                    color = Color.Black,
+                    modifier = Modifier.padding(start = 12.dp, top = 8.dp)
+                )
+            }
         }
-    }
 
-    Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
     Box(
         modifier = Modifier
-            .padding(horizontal = 35.dp)
+            .padding(horizontal = 40.dp)
             .fillMaxWidth()
             .clip(RoundedCornerShape(10.dp))
             .size(width = 155.dp, height = 95.dp)
             .background(
-                if(cryptoDetailsViewModel.cryptoDetail.value.data.changePercent24Hr.contains("-")){
-                    DecreaseValue} else {IncreaseValue}
+                if (cryptoDetailsViewModel.cryptoDetail.value.data.changePercent24Hr.contains("-")) {
+                    DecreaseValue
+                } else {
+                    IncreaseValue
+                }
             ),
         contentAlignment = Alignment.TopCenter
     ) {
         Text(
                         text = cryptoDetailsViewModel.cryptoDetail.value.data.changePercent24Hr,
 //            text = textex2.toString(),
-            style = MaterialTheme.typography.h4,
+            style = MaterialTheme.typography.h4.copy(color = Blackest),
             modifier = Modifier
                 .padding(top = 10.dp, bottom = 8.dp, start = 50.dp, end = 50.dp)
                 .align(Alignment.TopCenter),
@@ -224,7 +223,8 @@ fun OthersValuesSection(){
             text = "value change in the last 24 hrs.",
             modifier = Modifier.padding(top = 55.dp),
             overflow = TextOverflow.Ellipsis,
-            maxLines = 1
+            maxLines = 1,
+            color = Blackest
         )
     }
 

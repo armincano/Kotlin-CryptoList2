@@ -9,6 +9,8 @@ val Teal200 = Color(0xFF03DAC5)
 
 val SilverSoft = Color(0xFF181818)
 val PurpleSoft = Color(0xFF8172F9)
+val Blackest = Color(0xFF000001)
+
 
 val IncreaseValue = Color(0xFFE7FE55)
 val DecreaseValue = Color(0xFFFF6BA4)

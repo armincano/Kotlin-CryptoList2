@@ -85,7 +85,7 @@ fun StickyHeader(cryptoViewModel:CryptoViewModel, onItemClick: (id: String) -> U
         Button(
             onClick = { onItemClick("addUser")},
             modifier = Modifier
-                .size(width = 1900.dp, height = 40.dp)
+                .size(width = 1900.dp, height = 47.dp)
                 .padding(horizontal = 19.dp)
         ) {
 
@@ -129,7 +129,7 @@ fun StickyHeader(cryptoViewModel:CryptoViewModel, onItemClick: (id: String) -> U
         Button(
             onClick = { GlobalScope.launch(Dispatchers.IO) { cryptoViewModel.getCoins() }},
             modifier = Modifier
-                .size(width = 70.dp, height = 50.dp)
+                .size(width = 50.dp, height = 50.dp)
         ) {
             Row(
                 horizontalArrangement = Arrangement.Center,
@@ -176,7 +176,7 @@ fun CryptoListItem(item: Data, onItemClick: (id: String) -> Unit){
                     .build(),
                 contentDescription = null,
                 modifier = Modifier
-                    .weight(0.3f)
+                    .weight(0.27f)
                     .size(60.dp),
 //                    .clip(RoundedCornerShape(10.dp)),
 //                    .background(Color.White),
@@ -187,13 +187,13 @@ fun CryptoListItem(item: Data, onItemClick: (id: String) -> Unit){
             Text(
                 text = item.symbol.lowercase(),
                 style = MaterialTheme.typography.h4.copy(color = Color.White),
-                modifier = Modifier.weight(0.3f)
+                modifier = Modifier.weight(0.33f)
             )
             Text(
                 text = item.priceUsd.toString(),
                 style = MaterialTheme.typography.h6.copy(color = Color.White),
                 modifier = Modifier
-                    .weight(0.4f)
+                    .weight(0.40f)
                     .padding(end = 25.dp),
                 overflow = TextOverflow.Ellipsis,
                 maxLines = 1
