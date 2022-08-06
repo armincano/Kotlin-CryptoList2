@@ -7,6 +7,8 @@ Es una app Android que visualiza una **lista de criptomonedas** donde cada eleme
 |<p  align="center">Ícono de app. |<p  align="center">Pantalla principal.  |<p  align="center">Buscando criptomonedas que contengan el texto ingresado.  |
 |<p align="center"> <img src="readme/03-userProfile.png" width="220" alt="user profile screen">|<p align="center"> <img src="readme/04a-detailGreen.png" width="220" alt="detail screen green"> |<p align="center"> <img src="readme/04b-detailRed.png" width="220" alt="detail screen red"> |
 |<p  align="center">Cambiando de usuario luego de presionar el botón con ícono de lápiz en pantalla principal.  |<p  align="center">Pantalla de detalle luego de presionar una criptomoneda de la pantalla de inicio.  |<p  align="center">Pantalla de detalle cuando el valor de cambio de las últimas 24 horas es negativo.  |
+### Cápsula del funcionamiento y potenciales clientes de la app
+[![Img alt text](https://img.youtube.com/vi/h7ofCVMoT-0/0.jpg)](https://www.youtube.com/watch?v=YouTube_video_ID)
 
 ## Características técnicas
 - Lenguaje: Kotlin.
